@@ -10,17 +10,17 @@ This guide gives you a few tips on learning and education. Read the question, go
 
 * What javascript types do you know?
 * What types of conversion do you know?
-* How works Object + number?
-* How works undefined + string?
-* How works if (new Boolean(false))?
-* How works if ( { a: 4 } )?
+* How works ``` Object + number```?
+* How works ``` undefined + string```?
+* How works ``` if (new Boolean(false))```?
+* How works ``` if ( { a: 4 } )```?
 * How convert number to string?
 
 #### Event 
 
 * What event stages do you know?
 * What is target?
-* stopPropagation() vs stopImmediatePropagation() differences
+* ``` stopPropagation``` vs ```stopImmediatePropagation``` differences
 * How throw event?
 * How catch event?
 * How catch event on capturing stage?
@@ -29,17 +29,18 @@ This guide gives you a few tips on learning and education. Read the question, go
 #### OOP in javascript
 
 * How wroks pototype inheritance?
-* What is "proto" propetry and how we get it? Why we havn't write new properties to "proto" directly?
+* What is ```__proto__``` propetry and how we get it? Why we havn't write new properties to ```__proto__``` directly?
 * How we make prototype inheritance in javascript?
-* Make polyfill for Object.create()
 * What we get in instance of B class (extends A class) if we will change some variable in A.prototype?
 * What we get in instance of B class (extends A class) if we will change some variable that related to A class?
+* (Bonus) Make polyfill for ```Object.create()```
 
 #### Context
 
 * What way to pass the context in funciton do you know?
 * In which stage function get the context variable "this"?
 * What is lexical environment?
+* (Bonus) Make polyfill for ```bind()```
 
 #### Closures
 
@@ -55,6 +56,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * What returns onFullfiled function?
 * What returns catch if we chain it to promise invocation?
 * How works finally?
+* (Bonus) make polyfill for ```Promise.all```
 
 ### Typescript
 
@@ -62,7 +64,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * Why we have to use arrow functions?
 * What interfaces are compiled into?
 * What are the decorators under the hood?
-* How craete own decorator?
+* How create own decorator?
 
 ### Angular
 
@@ -89,8 +91,8 @@ This guide gives you a few tips on learning and education. Read the question, go
 * What are the differences between the subject and the observable?
 * Subject types?
 * What operator on observable do you know?
-* flatMap and map differences?
-* flatMap and switchMap differences?
+* ```flatMap``` and ```map``` differences?
+* ```flatMap``` and ```switchMap``` differences?
 * Ways to unsubcribe of observable? 
 * (Bonus) How works takeWhile and takeUntil?
 
@@ -100,7 +102,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * What in dependency injection and dependency tree?
 * How works providers on module and providers on compoennts?
 * How we can prevent injector creation for lazyloaded module?
-* (Bonus) How implement forRoot method and why we need it?
+* (Bonus) How implement ```forRoot``` method and why we need it?
 * How implement lazyloading?
 
 #### Pipes
@@ -127,7 +129,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 ### Testing
 
 * How test component?
-* What is TestBed?
+* What is ```TestBed```?
 * How mock http service and test it?
 * What is spy?
 
