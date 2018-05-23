@@ -1,4 +1,4 @@
-# Cracking JS Developer (Angular) interview for intermediate level
+# Cracking JS Developer (Angular) interview (mid level)
 
 ## Getting Started
 
@@ -55,6 +55,14 @@ This guide gives you a few tips on learning and education. Read the question, go
 * What returns onFullfiled function?
 * What returns catch if we chain it to promise invocation?
 * How works finally?
+
+### Typescript
+
+* Why we have to use let and const instead of var?
+* Why we have to use arrow functions?
+* What interfaces are compiled into?
+* What are the decorators under the hood?
+* How craete own decorator?
 
 ### Angular
 
@@ -124,3 +132,149 @@ This guide gives you a few tips on learning and education. Read the question, go
 * What is spy?
 
 ### Exercises
+
+* Sort words by number inside: ```'ads2aa 5qw asd1aa' => 'asd1aa ads2aa 5qw'```
+``` javascript
+function sortWords(str) {
+  var arr = str.split(' ');
+  return arr.sort( (a,b) => {
+    var num1 = +a.replace(/[^0-9]/g, '')
+    var num2 = +b.replace(/[^0-9]/g, '')
+    return num1-num2
+  }).join(' ')
+}
+```
+
+* Find and collect anagramms: ```['adsaa', 'asaad', 'gqw', 'qwg'] => [ [ 'adsaa', 'asaad' ], [ 'gqw', 'qwg' ] ]```
+``` javascript
+function sortWords(str) {
+  var arr = str.split(' ');
+  return arr.sort( (a,b) => {
+    var num1 = +a.replace(/[^0-9]/g, '')
+    var num2 = +b.replace(/[^0-9]/g, '')
+    return num1-num2
+  }).join(' ')
+}
+```
+
+* Make funny object from string: ```'a.b.c.d' => { a : { b : { c : { d: null } } } } ```
+``` javascript
+function objectizer(str) {
+  return str.split('.').reduceRight( (total, a) => {
+    return { [a]: total }
+  }, null);
+}
+```
+
+* fibonacci
+``` javascript
+function fibo(num) {
+  function fibo_run(prev, next, count) {
+    return count > 0 ? fibo(next, prev+next, --count) : next;
+  }
+  return fibo_run(1, 1, num);
+}
+```
+
+
+* Find monotone sequence: ```
+  [2,3,4] => true;
+  [4,3,1,1] => true;
+  [2,5,1] => false;
+  [1,2,3,0] => false;
+  [1,2,2,2,1] => false```
+``` javascript
+function mono(arr) {
+  var status;
+  var prevStatus;
+  for (var i = 0; i<arr.length-1; i++) {
+    if (arr[i] == arr[i+1]) continue;
+    if (prevStatus === undefined) {
+      prevStatus = ((arr[i] - arr[i+1]) > 0)
+      continue;
+    }
+    status = (arr[i] - arr[i+1] > 0)
+    if (prevStatus == status) {
+      continue;
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+```
+
+* Validate brackets: ```
+  '()()()' => true;
+  '(())()' => true;
+  ')()' => false;
+  '(()' => false;```
+``` javascript
+function bracketsValidate(str) {
+  var counter = 0;
+  for ( var i = 0; i < arr.length; i++) {
+    if ( arr[i] == ')' ) counter--;
+    if ( arr[i] == '(' ) counter++;
+    if ( counter < 0) return false;
+  }
+  return counter == 0;
+}
+```
+
+* Compress word: ```'aaavvdeeemmmg' => 'a3v2de3m3g'```
+``` javascript
+function compressWord(str) {
+  var result = '';
+  var counter = 1;
+  for ( var i = 0; i < str.length; i++) {
+    if (result.length == 0) {
+      result = result.concat(str[i])
+      continue;
+    }
+    if (result[result.length-1] != str[i]) {
+      if (counter > 1) {
+        result = result.concat(counter)
+        counter = 1;
+      }
+      result = result.concat(str[i])
+    } else {
+      counter++;
+    }
+  }
+  return result;
+}
+```
+
+* Currying: ```add(4)(3)(1) => 8```
+``` javascript
+function add(a) {
+  function addFunc(b) {
+    a += b;
+    return addFunc;
+  }
+  addFunc.valueOf = function() {
+    return a;
+  }
+  addFunc.toString = function() {
+    return a;
+  }
+  return addFunc
+}
+```
+
+* Create increment function for array (behave like number): ```
+  [4,5,3].increment() => [4, 5, 4];
+  [4,5,9].increment() => [4, 6, 0]```
+``` javascript
+Array.prototype.increment = function() { 
+  var incremented = false; 
+  this.reverse().forEach( (item,i) => { 
+    if ( item < 9 && !incremented ) { 
+      this[i] = ++item; incremented = true; 
+    } else if (item == 9) {
+      this[i] = 0;
+    }
+  } ); 
+  return this.reverse().slice()  
+}
+```
