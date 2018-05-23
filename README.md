@@ -4,6 +4,15 @@
 
 This guide gives you a few tips on learning and education. Read the question, google, go to the next, repeat. There are no guarantees that you will receive the same questions in your interview. But I hope that this list will simplify it.
 
+## Table of contents
+
+* [Javascript](https://github.com/vladborsh/js-developer-interview#javascript)
+* [Typescript](https://github.com/vladborsh/js-developer-interview#typescript)
+* [Angular](https://github.com/vladborsh/js-developer-interview#angular)
+* [Links](https://github.com/vladborsh/js-developer-interview#links)
+
+## Interview questions
+
 ### Javascript
 
 #### Type conversion
@@ -280,3 +289,9 @@ Array.prototype.increment = function() {
   return this.reverse().slice()  
 }
 ```
+
+## Links
+
+* [Javascript.info](https://javascript.info/first-steps) - From the basics to advanced topics with simple, but detailed explanations
+* [JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/) - This book is targeted at professional developers wishing to improve their knowledge of design patterns and how they can be applied to the JavaScript programming language.
+* [Rangle's Angular Training Book](https://angular-2-training-book.rangle.io/handout/why_angular_2.html) - This book will cover the most important Angular topics
