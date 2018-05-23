@@ -1,4 +1,4 @@
-# Cracking JS Developer (Angular) interview (mid level)
+# Cracking JS Developer (Angular) interview
 
 ## Getting Started
 
