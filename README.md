@@ -9,6 +9,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * [Javascript](https://github.com/vladborsh/js-developer-interview#javascript)
 * [Typescript](https://github.com/vladborsh/js-developer-interview#typescript)
 * [Angular](https://github.com/vladborsh/js-developer-interview#angular)
+* [Exercises](https://github.com/vladborsh/js-developer-interview#exercises)
 * [Links](https://github.com/vladborsh/js-developer-interview#links)
 
 ## Interview questions
