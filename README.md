@@ -34,23 +34,23 @@ This guide gives you a few tips on learning and education. Read the question, go
 * How throw event?
 * How catch event?
 * How catch event on capturing stage?
-* How change colors on multiple divs on mouse click? WHat is delegation? 
+* How change colors on multiple div's on mouse click? What is delegation? 
 
 #### OOP in javascript
 
 * How wroks pototype inheritance?
-* What is ```__proto__``` propetry and how we get it? Why we havn't write new properties to ```__proto__``` directly?
+* What is ```__proto__``` propetry and how we get it? Why we haven't write new properties to ```__proto__``` directly?
 * How we make prototype inheritance in javascript?
-* What we get in instance of B class (extends A class) if we will change some variable in A.prototype?
-* What we get in instance of B class (extends A class) if we will change some variable that related to A class?
-* (Bonus) Make polyfill for ```Object.create()```
+* What we will get in instance of B class (extends A class) if we will change some variable in A.prototype?
+* What we will get in instance of B class (extends A class) if we will change some variable that related to A class?
+* (**Bonus**) Make polyfill for ```Object.create()```
 
 #### Context
 
 * What way to pass the context in funciton do you know?
 * In which stage function get the context variable "this"?
 * What is lexical environment?
-* (Bonus) Make polyfill for ```bind()```
+* (**Bonus**) Make polyfill for ```bind()```
 
 #### Closures
 
@@ -66,7 +66,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * What returns onFullfiled function?
 * What returns catch if we chain it to promise invocation?
 * How works finally?
-* (Bonus) make polyfill for ```Promise.all```
+* (**Bonus**) make polyfill for ```Promise.all```
 
 ### Typescript
 
@@ -74,7 +74,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * Why we have to use arrow functions?
 * What interfaces are compiled into?
 * What are the decorators under the hood?
-* How create own decorator?
+* (**Bonus**) How create own decorator? Examples...
 
 ### Angular
 
@@ -85,7 +85,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * How works view encapsulation? What types of view encapsulation do you know?
 * How we can detect click on component?
 * What is host listener and host binding?
-* (Bonus) Ways to change child components styles
+* (**Bonus**) Ways to change child components styles
 
 #### Change detenction
 
@@ -93,7 +93,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * How works change detection in angular?
 * What approaches do you know to disable change detection in components?
 * What approaches do you know to enable change detection in components again? 
-* (Bonus) How it works?
+* (**Bonus**) What event in zone triggers change detection?
 
 #### RxJS
 
@@ -104,7 +104,7 @@ This guide gives you a few tips on learning and education. Read the question, go
 * ```flatMap``` and ```map``` differences?
 * ```flatMap``` and ```switchMap``` differences?
 * Ways to unsubcribe of observable? 
-* (Bonus) How works takeWhile and takeUntil?
+* (**Bonus**) How works ```takeWhile``` and ```takeUntil```?
 
 #### DI & Modules
 
@@ -112,15 +112,15 @@ This guide gives you a few tips on learning and education. Read the question, go
 * What in dependency injection and dependency tree?
 * How works providers on module and providers on compoennts?
 * How we can prevent injector creation for lazyloaded module?
-* (Bonus) How implement ```forRoot``` method and why we need it?
 * How implement lazyloading?
+* (**Bonus**) How implement ```forRoot``` method and why we need it?
 
 #### Pipes
 
 * Why we need pipes?
 * How implement custom pipe?
 * What is pure and impure pipes?
-* (Bonus) How implement statefull pipe?
+* (**Bonus**) How implement statefull pipe?
 
 #### Forms
 
@@ -141,9 +141,11 @@ This guide gives you a few tips on learning and education. Read the question, go
 * How test component?
 * What is ```TestBed```?
 * How mock http service and test it?
-* What is spy?
+* (**Bonus**) What is spy? Did you ever use it?
 
 ### Exercises
+
+Try to solve it without tips
 
 * Sort words by number inside: ```'ads2aa 5qw asd1aa' => 'asd1aa ads2aa 5qw'```
 ``` javascript
@@ -290,6 +292,12 @@ Array.prototype.increment = function() {
   return this.reverse().slice()  
 }
 ```
+
+* Create polyfill for ```Promise.all```
+
+* Create polyfill for ```Object.create```
+
+* Create polyfill for ```bind```
 
 ## Links
 
