@@ -161,13 +161,20 @@ function sortWords(str) {
 
 * Find and collect anagramms: ```['adsaa', 'asaad', 'gqw', 'qwg'] => [ [ 'adsaa', 'asaad' ], [ 'gqw', 'qwg' ] ]```
 ``` javascript
-function sortWords(str) {
-  var arr = str.split(' ');
-  return arr.sort( (a,b) => {
-    var num1 = +a.replace(/[^0-9]/g, '')
-    var num2 = +b.replace(/[^0-9]/g, '')
-    return num1-num2
-  }).join(' ')
+function findAnagramms(arr) {
+  var cache = {};
+  var result = [];
+  for (var i = 0; i < arr.length; i++) {
+    var sorted = arr[i].split('').sort().join('');
+    if (!cache[sorted]) {
+      cache[sorted] = [];
+    }
+    cache[sorted].push(arr[i]);
+  }
+  for (var key in cache) {
+    result.push(cache[key]);
+  }
+  return result;
 }
 ```
 
