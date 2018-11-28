@@ -276,9 +276,6 @@ function add(a) {
   addFunc.valueOf = function() {
     return a;
   }
-  addFunc.toString = function() {
-    return a;
-  }
   return addFunc
 }
 ```
@@ -295,7 +292,8 @@ Array.prototype.increment = function() {
     } else if (item == 9) {
       this[i] = 0;
     }
-  } ); 
+  });
+  if (this[this.length-1] == 0) this.push(1); 
   return this.reverse().slice()  
 }
 ```
