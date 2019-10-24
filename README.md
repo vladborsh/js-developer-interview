@@ -191,9 +191,9 @@ function objectizer(str) {
 ``` javascript
 function fibo(num) {
   function fibo_run(prev, next, count) {
-    return count > 0 ? fibo(next, prev+next, --count) : next;
+    return count > 0 ? fibo_run(next, prev+next, --count) : next;
   }
-  return fibo_run(1, 1, num);
+  return fibo_run(0, 1, num-1);
 }
 ```
 
